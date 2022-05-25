@@ -4,12 +4,12 @@ const app = express()
 const port = process.env.PORT;
 const hbs = require('hbs');
 
-//Handlebars
+// Handlebars
 app.set('view engine', 'hbs');
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials( __dirname + '/views/partials');
 
-//servir contenido estatico
-app.use( express.static('public') )
+// Servir contenido estático
+app.use( express.static('public') );
 
 app.get('/',  (req, res) => {
     res.render('home', {
